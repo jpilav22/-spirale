@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: grid;
+    place-items: center;
+  }
+  
+  
+  
+  
+  
+  
+  .container {
+    display: grid;
+    
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    grid-template-columns: repeat(4, 1fr); 
+    
+     
+  }
+  
+  .glavnaVijest {
+    width:100vw ;
+    height: 50vw;
+    grid-column: 1 / span 4;
+    background-color: #E8F4FA;
+    color: white;
+ 
+    gap: 20px; 
+    
+    align-items: flex-start; 
+    padding: 20px;
+  }
+  
+  .visokaVijest {
+    
+    overflow: auto;
+    width: 25vw;
+    height: 50vw;
+   
+    grid-row: 2 / span 2;
+    background-color:#D0E8F2;
+      
+    }
+   
+  
+  
+  .kvadratnaVijest {
+   
+    overflow: auto;
+    grid-row: span 1;
+    width: 25vw;
+    height: 25vw;
+    background-color: #B8DDE5;
+    
+  }
+  
+
+
+  .kvadratnaVijest,
+          .visokaVijest {
+              border: 2px solid black;
+          }
+  #kv1 {
+      grid-column: 2;
+      grid-row: 2;
+     
+    }
+    
+    #kv2 {
+      grid-column: 2;
+      grid-row: 3;
+      
+    }
+    
+    #kv3 {
+      grid-column: 3;
+      grid-row: 2;
+      
+    }
+    
+    #kv4 {
+      grid-column: 3;
+      grid-row: 3;
+      
+    }
+    
+    #vv2 {
+      grid-column: 4;
+      grid-row: 2 / span 2;
+     
+    }
+    
+    #kv5 {
+      grid-column: 1;
+      grid-row: 4;
+      
+    }
+    
+    #kv6 {
+      grid-column: 1;
+      grid-row: 5;
+     
+    }
+    
+    #kv7 {
+      grid-column: 2;
+      grid-row: 4;
+    
+    }
+    
+    #kv8 {
+      grid-column: 2;
+      grid-row: 5;
+     
+    }
+    
+    #vv3 {
+      grid-column: 3;
+      grid-row: 4 / span 2;
+     
+    }
+    
+    #vv4 {
+      grid-column: 4;
+      grid-row: 4 / span 2;
+      
+    }
+  
+  @media (max-width: 799px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr); 
+     
+    }
+    
+  
+    .glavnaVijest {
+      grid-column: 1 / span 2;
+      width:100vw ;
+      height: 100vw;
+      
+    }
+    .visokaVijest{
+      width:50vw ;
+      height: 100vw;
+    }
+  
+    .kvadratnaVijest{
+      width:50vw ;
+      height: 50vw;
+    }
+    #vv1 {
+      grid-column: 1;
+      grid-row: 2 / span 2;
+     
+      
+    }
+    
+    #kv1 {
+      grid-column: 2;
+      grid-row: 2;
+      
+    }
+    
+    #kv2 {
+      grid-column: 2;
+      grid-row: 3;
+     
+    }
+    
+    #kv3 {
+      grid-column: 1;
+      grid-row: 4;
+     
+    }
+    
+    #kv4 {
+      grid-column: 1;
+      grid-row: 5;
+     
+    }
+    
+    #vv2 {
+      grid-column: 2;
+      grid-row: 4 / span 2;
+      
+    }
+    
+    #kv5 {
+      grid-column: 1;
+      grid-row: 6;
+      
+    }
+    
+    #kv6 {
+      grid-column: 1;
+      grid-row: 7;
+      
+    }
+    
+    #kv7 {
+      grid-column: 2;
+      grid-row: 6;
+     
+    }
+    
+    #kv8 {
+      grid-column: 2;
+      grid-row: 7;
+     
+    }
+    
+    #vv3 {
+      grid-column: 1;
+      grid-row: 8 / span 2;
+      
+    }
+    
+    #vv4 {
+      grid-column: 2;
+      grid-row: 8 / span 2;
+     
+    }
+  }
+
+  
+
+
+
+ h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #004080; /* Tamnoplava */
+    margin-bottom: 15px;
+}
+
+.glavnaVijest p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #00509E; /* Srednje plava */
+}
+h2 {
+  font-family: 'Verdana', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #003366; /* Tamnoplava */
+  margin-bottom: 10px;
+}
+.visokaVijest p {
+  font-size: 1rem;
+  color: #004080;
+}
+
+h3 {
+  font-family: 'Tahoma', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #002D5A; /* Najtamnija plava */
+  margin-bottom: 8px;
+}
+.kvadratnaVijest p {
+  font-size: 0.9rem;
+  color: #003366;
+}
+
+img {
+  width:80vw ; 
+  height: 30vw; 
+  text-align: center;
+  border-radius: 8px;
+}

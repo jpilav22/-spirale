@@ -1,0 +1,214 @@
+[
+  {
+    "id": 1,
+    "tip_nekretnine": "Stan",
+    "naziv": "Useljiv stan Sarajevo",
+    "kvadratura": 58,
+    "cijena": 232000,
+    "tip_grijanja": "plin",
+    "lokacija": "Novo Sarajevo",
+    "godina_izgradnje": 2019,
+    "datum_objave": "01.10.2023.",
+    "opis": "Sociis natoque penatibus.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "Nullam eu pede mollis pretium."
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Phasellus viverra nulla."
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Da li je ova nekretnina još uvek dostupna?"
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "koja je cijene"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "tip_nekretnine": "Poslovni prostor",
+    "naziv": "Mali poslovni prostor",
+    "kvadratura": 20,
+    "cijena": 70000,
+    "tip_grijanja": "struja",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2005,
+    "datum_objave": "20.08.2023.",
+    "opis": "Magnis dis parturient montes.",
+    "upiti": [
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Integer tincidunt."
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "koliko smijem upita poslati"
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "odgovoirte na upit "
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "tip_nekretnine": "Kuća",
+    "naziv": "Prostrana kuća",
+    "kvadratura": 150,
+    "cijena": 350000,
+    "tip_grijanja": "centralno",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2010,
+    "datum_objave": "15.09.2023.",
+    "opis": "Prostrana kuća u centru grada sa vrtom.",
+    "upiti": [
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Duis aute irure dolor in reprehenderit."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "tip_nekretnine": "Stan",
+    "naziv": "Moderno opremljen stan",
+    "kvadratura": 75,
+    "cijena": 180000,
+    "tip_grijanja": "struja",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2022,
+    "datum_objave": "10.12.2023.",
+    "opis": "Luksuzni stan u novoj zgradi sa pogledom na grad.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "Sed ut perspiciatis unde omnis iste."
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "uredu "
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "uredu 1"
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "uredu 2"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "tip_nekretnine": "Poslovni prostor",
+    "naziv": "Veliki poslovni prostor",
+    "kvadratura": 100,
+    "cijena": 150000,
+    "tip_grijanja": "klima",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2000,
+    "datum_objave": "05.11.2023.",
+    "opis": "Prostran poslovni prostor na frekventnoj lokaciji.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "Quis autem vel eum iure reprehenderit."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "tip_nekretnine": "Stan",
+    "naziv": "Stan u blizini parka",
+    "kvadratura": 45,
+    "cijena": 130000,
+    "tip_grijanja": "plin",
+    "lokacija": "Ilidža",
+    "godina_izgradnje": 2018,
+    "datum_objave": "12.12.2023.",
+    "opis": "Komforan stan u mirnom naselju sa pogledom na park.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "Sed ut perspiciatis unde omnis iste natus."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "tip_nekretnine": "Kuća",
+    "naziv": "Luksuzna vila",
+    "kvadratura": 250,
+    "cijena": 750000,
+    "tip_grijanja": "solarno",
+    "lokacija": "Vogošća",
+    "godina_izgradnje": 2015,
+    "datum_objave": "09.01.2023.",
+    "opis": "Vila sa bazenom i velikim dvorištem.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "Ullamco laboris nisi ut aliquip ex ea."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "tip_nekretnine": "Stan",
+    "naziv": "Stan u novoj zgradi",
+    "kvadratura": 55,
+    "cijena": 160000,
+    "tip_grijanja": "struja",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2021,
+    "datum_objave": "18.11.2023.",
+    "opis": "Stan u srcu grada sa svim sadržajima u blizini.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "Excepteur sint occaecat cupidatat non proident."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "tip_nekretnine": "Poslovni prostor",
+    "naziv": "Moderna kancelarija",
+    "kvadratura": 40,
+    "cijena": 50000,
+    "tip_grijanja": "klima",
+    "lokacija": "Pofalići",
+    "godina_izgradnje": 2012,
+    "datum_objave": "25.12.2023.",
+    "opis": "Prostor za kancelarije sa odličnim pristupom.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "Velit esse cillum dolore eu fugiat nulla."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "tip_nekretnine": "Kuća",
+    "naziv": "Kuća sa dvorištem",
+    "kvadratura": 120,
+    "cijena": 320000,
+    "tip_grijanja": "centralno",
+    "lokacija": "Novi Grad",
+    "godina_izgradnje": 2008,
+    "datum_objave": "22.12.2023.",
+    "opis": "Idealna kuća za porodicu sa velikim dvorištem.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "Duis aute irure dolor in reprehenderit."
+      }
+    ]
+  }
+]

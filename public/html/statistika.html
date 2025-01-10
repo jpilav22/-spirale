@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistika Nekretnina</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/statistika.css">
+</head>
+
+<body>
+    <h1>Statistika Nekretnina</h1>
+
+
+
+    <h2>Izrčunaj prosječnu kvadraturu po kriteriju</h2>
+
+    <form id="filterForm">
+        <label for="kriterijInput">Unesite kriterij (tip_nekretnine: , max_cijena: , min_cijena: , max_kvadratura: ,
+            min_kvadratura: ):</label><br>
+        <input type="text" id="kriterijInput" placeholder="Unesi kriterij" required><br>
+        <button type="submit">Izračunaj prosječnu kvadraturu</button>
+    </form>
+
+    <div id="filterResult"></div>
+
+
+
+
+    <h2>Pronađi outlier po kriteriju i svojstvu</h2>
+
+    <form id="filterFormOutlier">
+        <label for="kriterijInputOutlier">Unesite kriterij (tip_nekretnine, max_cijena, min_cijena, max_kvadratura,
+            min_kvadratura):</label>
+        <input type="text" id="kriterijInputOutlier" required>
+        <br>
+        <button type="button" id="checkKriterijBtnOutlier">Provjeri Kriterij</button>
+        <br><br>
+
+        <label for="svojstvoInputOutlier">Unesite svojstvo za outlier (npr. 'cijena', 'kvadratura',
+            'godina_izgradnje'):</label>
+        <input type="text" id="svojstvoInputOutlier" disabled>
+        <br>
+        <button type="button" id="checkSvojstvoBtnOutlier" disabled>Provjeri Svojstvo</button>
+        <br><br>
+
+        <button type="submit" id="findOutlierBtnOutlier" disabled>Pronađi Outlier</button>
+    </form>
+
+    <div id="filterResultOutlier"></div>
+
+
+    <h2>Ispiši moje nekretnine</h2>
+
+    <label for="username">Korisničko ime:</label>
+    <input type="text" id="username" placeholder="Unesite korisničko ime">
+
+
+    <button id="ispisiMojeneKretnine">Prikaži moje nekretnine</button>
+
+
+    <div id="nekretnineResult"></div>
+
+    <h2>Histogram Cijena</h2>
+    <form id="histogramForm">
+        <div id="periodsContainer">
+            <label>Unesi period (od dd.mm.yyyy - do dd.mm.yyyy):</label><br>
+            <div class="periodFields">
+                <input type="text" class="startDate" placeholder="01.01.2020." required>
+                <input type="text" class="endDate" placeholder="31.12.2020." required>
+            </div>
+        </div>
+        <button type="button" id="addPeriodBtn">Dodaj period</button>
+        <br>
+        <div id="priceRangesContainer">
+            <label>Unesi raspon cijena (min - max):</label><br>
+            <div class="priceRangeFields">
+                <input type="number" class="minPrice" placeholder="0" required>
+                <input type="number" class="maxPrice" placeholder="300000" required>
+            </div>
+        </div>
+        <button type="button" id="addPriceRangeBtn">Dodaj raspon cijena</button>
+        <br>
+        <button type="submit">Generiši histogram</button>
+    </form>
+    <canvas id="histogramChart" width="800" height="400"></canvas>
+
+
+
+
+
+    <script src="../Scripts/SpisakNekretnina.js"></script>
+    <script src="../Scripts/StatistikaNekretnina.js"></script>
+   
+    <script src="../Scripts/statistika.js"></script>
+</body>
+
+</html>

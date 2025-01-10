@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "ime": "Neko",
+      "prezime": "Nekic",
+      "username": "username1",
+      "password": "111"
+    },
+    {
+      "id": 2,
+      "ime": "Neko2",
+      "prezime": "Nekic2",
+      "username": "username2",
+      "password": "222"
+    },
+    {
+      "id": 3,
+      "ime": "Neko2",
+      "prezime": "Nekic2",
+      "username": "username3",
+      "password": "333"  
+    }
+  ]

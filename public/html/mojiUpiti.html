@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Moji Upiti</title>
+    <script src="poziviAjax.js"></script> <!-- Uključi JavaScript fajl koji sadrži AJAX funkcije -->
+</head>
+<body>
+    <h1>Moji Upiti</h1>
+    
+    <!-- Mesto gde ćemo prikazivati upite -->
+    <div id="upiti-lista"></div>
+    
+    <script>
+        window.onload = function() {
+            // Pozivanje AJAX funkcije da dobije upite kada je stranica učitana
+            PoziviAjax.getMojiUpiti(function(err, data) {
+                if (err) {
+                    // Ako dođe do greške, prikazujemo poruku greške
+                    document.getElementById('upiti-lista').innerHTML = "<p>Došlo je do greške: " + err.statusText + "</p>";
+                } else {
+                    // Ako je uspešno, prikazujemo upite
+                    let upiti = JSON.parse(data); // Pretvaramo JSON odgovor u objekt
+                    let htmlContent = "<ul>";
+
+                    // Prolazimo kroz upite i dodajemo ih u listu
+                    upiti.forEach(upit => {
+                        htmlContent += `<li><strong>Upit:</strong> ${upit.tekst_upita}</li>`;
+                    });
+
+                    htmlContent += "</ul>";
+                    document.getElementById('upiti-lista').innerHTML = htmlContent;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

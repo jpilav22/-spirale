@@ -1,0 +1,18 @@
+1. zadatak (pocetni meni)
+Pozitivne strane:
+raspored na stranici, dobro je da se meniji nalaze na vrhu, dovoljno su upecatljivi
+negativne strane:
+pored menija u vrhu ostatak je prazan, dodabih nesto o tome cemu je stranica namijenjena 
+2.zadatak (nekretnine)
+pozitivne strane:
+dokument je dobro uređen, svi stilovi su stavljeni kroz zaseban css file. Različiti id-evi olakšavaju razlikovanje stilova ktoz css, a različite boje za različite tipove daju bolju preglednost korisniku.
+negativne strane: 
+napravila bih neke izmjene za razlicite velicine ekrana npr da se za manje ekrane prikazuju kuce, a da se navigacijskim dugmadima prelazi na stanove ili poslovne prostore.
+Također stavila bih više prostora za slike ili u nekretnine.html ili u detalji.html jer korisnici za sad mogu vidjeti samo jednu sobu, cijelu kucu ili mali dio prostora.
+(da je mouce koristiti js stavila bih padjucu listu slicnu onoj sa laboratorijske vjezbe za svaku nekretninu koja ce pokazivati njene slike)
+3.zadatak (detalji)
+pozitivne strane:
+korištenje flex rasporeda (flex-direction, flex-wrap, justify-content, i align-items), jer omogućavaju kontrolu rasporeda u kontekstu različitih veličina ekrana. 
+negativne strane:
+pošto je desna strana (dio pored slike) skroz prazna tu bih stavila informacije koje trenutno stoje ispod slike jer bi bile upečatljivije korisniku (uradila bih to preko flexa i start poravnanja)
+ili bih na tom dijelu dodala još slika koje prikazuju npr. druge sobe, instalacije i sl. Raspored upita je i ovako čitljiv mada bih svakako uradila ono što se tražilo u zadatku (namjestila različit prikaz za manje ekrane).
