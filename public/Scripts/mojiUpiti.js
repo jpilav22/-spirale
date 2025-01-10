@@ -1,43 +1,29 @@
-window.onload = function () {
-    // Funkcija za prikazivanje upita korisnika
-    function displayUserQueries(queries) {
-        const container = document.getElementById("mojiUpitiContainer");
+document.addEventListener("DOMContentLoaded", function() {
+    // Poziv funkcije koja povlači upite korisnika
+    PoziviAjax.getMojiUpiti((error, data) => {
+        if (error) {
+            console.error("Greška pri dohvatu upita:", error);
+            return;
+        }
 
+        const upiti = JSON.parse(data); // pretvori JSON u JavaScript objekat
+        const container = document.getElementById('upiti-container');
+        
         // Ako nema upita
-        if (queries.length === 0) {
-            container.innerHTML = "<p>Nemate nijedan upit.</p>";
-        } else {
-            let htmlContent = "<ul>";
-            queries.forEach(query => {
-                htmlContent += `<li><strong>Nekretnina ID:</strong> ${query.id_nekretnine} <br><strong>Upit:</strong> ${query.tekst_upita}</li>`;
-            });
-            htmlContent += "</ul>";
-            container.innerHTML = htmlContent;
+        if (upiti.length === 0) {
+            container.innerHTML = '<p>Nemate upita.</p>';
+            return;
         }
-    }
 
-    // Funkcija za prikazivanje poruke o neautorizovanom pristupu
-    function displayErrorMessage() {
-        const errorMessageDiv = document.getElementById("errorMessage");
-        errorMessageDiv.style.display = "block";
-    }
-
-    // Provjerite da li je korisnik prijavljen i pozovite odgovarajuću funkciju
-    PoziviAjax.getKorisnik(function (err, data) {
-        if (err || !data || !data.username) {
-            // Ako korisnik nije prijavljen, prikaži poruku o grešci
-            displayErrorMessage();
-        } else {
-            // Ako je korisnik prijavljen, dohvati njegove upite
-            PoziviAjax.getMojiUpiti(function (error, queries) {
-                if (error) {
-                    // Ako postoji greška prilikom dobavljanja upita, obavijestite korisnika
-                    displayErrorMessage();
-                } else {
-                    // Prikazivanje upita
-                    displayUserQueries(queries);
-                }
-            });
-        }
+        // Kreiraj HTML elemente za svaki upit
+        upiti.forEach(upit => {
+            const upitElement = document.createElement('div');
+            upitElement.classList.add('upit-item');
+            upitElement.innerHTML = `
+                <p><strong>ID Nekretnine:</strong> ${upit.id_nekretnine}</p>
+                <p><strong>Upit:</strong> ${upit.tekst_upita}</p>
+            `;
+            container.appendChild(upitElement);
+        });
     });
-};
+});

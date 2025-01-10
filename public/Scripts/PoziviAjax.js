@@ -216,6 +216,8 @@ const PoziviAjax = (() => {
         });
     }
     
+    
+    
     function impl_getNekretnina(nekretnina_id, fnCallback) {
         const url = `http://localhost:3000/nekretnina/${nekretnina_id}`;
         ajaxRequest('GET', url, null, (error, data) => {

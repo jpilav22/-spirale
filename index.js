@@ -44,7 +44,7 @@ const routes = [
   { route: '/meni.html', file: 'meni.html' },
   { route: '/prijava.html', file: 'prijava.html' },
   { route: '/profil.html', file: 'profil.html' },
-  { route: '/mojiUpiti.html', file: 'mojiUpiti.html' },
+  { route: '/mojiUpiti.html', file: 'mojiUpiti.html' }
 ];
 
 routes.forEach(({ route, file }) => {
