@@ -6,7 +6,7 @@ window.onload = function() {
         alert("Greška pri učitavanju upita: " + err);
       } else {
         // Ako uspješno dobijemo podatke, prikazujemo ih na stranici
-        let upitiList = document.getElementById("upitiList");
+        let upitiList = document.getElementById("upiti-lista");
         if (data.length === 0) {
           upitiList.innerHTML = "<p>Nema vaših upita.</p>";
         } else {
