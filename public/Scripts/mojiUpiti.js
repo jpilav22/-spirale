@@ -1,29 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Poziv funkcije koja povlači upite korisnika
-    PoziviAjax.getMojiUpiti((error, data) => {
-        if (error) {
-            console.error("Greška pri dohvatu upita:", error);
-            return;
+window.onload = function() {
+    // Pozivamo funkciju za učitavanje upita
+    PoziviAjax.getMojiUpiti(function(err, data) {
+      if (err) {
+        // Ako dođe do greške, obavještavamo korisnika
+        alert("Greška pri učitavanju upita: " + err);
+      } else {
+        // Ako uspješno dobijemo podatke, prikazujemo ih na stranici
+        let upitiList = document.getElementById("upitiList");
+        if (data.length === 0) {
+          upitiList.innerHTML = "<p>Nema vaših upita.</p>";
+        } else {
+          let htmlContent = "<ul>";
+          data.forEach(query => {
+            htmlContent += `<li>Nekretnina ID: ${query.id_nekretnine}, Upit: ${query.tekst_upita}</li>`;
+          });
+          htmlContent += "</ul>";
+          upitiList.innerHTML = htmlContent;
         }
-
-        const upiti = JSON.parse(data); // pretvori JSON u JavaScript objekat
-        const container = document.getElementById('upiti-container');
-        
-        // Ako nema upita
-        if (upiti.length === 0) {
-            container.innerHTML = '<p>Nemate upita.</p>';
-            return;
-        }
-
-        // Kreiraj HTML elemente za svaki upit
-        upiti.forEach(upit => {
-            const upitElement = document.createElement('div');
-            upitElement.classList.add('upit-item');
-            upitElement.innerHTML = `
-                <p><strong>ID Nekretnine:</strong> ${upit.id_nekretnine}</p>
-                <p><strong>Upit:</strong> ${upit.tekst_upita}</p>
-            `;
-            container.appendChild(upitElement);
-        });
+      }
     });
-});
+  };
+  

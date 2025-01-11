@@ -201,20 +201,7 @@ const PoziviAjax = (() => {
         });
     }
 
-    function impl_getMojiUpiti(fnCallback) {
-        ajaxRequest('GET', '/upiti/moji', null, (error, data) => {
-            if (error) {
-                fnCallback(error, null);
-            } else {
-                try {
-                    const myQueries = JSON.parse(data);
-                    fnCallback(null, myQueries);
-                } catch (parseError) {
-                    fnCallback(parseError, null);
-                }
-            }
-        });
-    }
+  
     
     
     
@@ -249,6 +236,21 @@ const PoziviAjax = (() => {
             }
         });
     }
+
+    function impl_getMojiUpiti(fnCallback) {
+        ajaxRequest('GET', '/upiti/moji', null, (error, data) => {
+          if (error) {
+            fnCallback(error, null);
+          } else {
+            try {
+              const upiti = JSON.parse(data);
+              fnCallback(null, upiti);
+            } catch (parseError) {
+              fnCallback(parseError, null);
+            }
+          }
+        });
+      }
     return {
         postLogin: impl_postLogin,
         postLogout: impl_postLogout,
@@ -257,7 +259,7 @@ const PoziviAjax = (() => {
         postUpit: impl_postUpit,
         getNekretnine: impl_getNekretnine,
         getTop5Nekretnina:impl_getTop5Nekretnina,
-        getMojiUpiti : impl_getMojiUpiti,
+        getMojiUpiti: impl_getMojiUpiti,
         getNekretnina: impl_getNekretnina,
         getNextUpiti:impl_getNextUpiti
                        
